@@ -1,1 +1,1 @@
-function other(){return"other"}function test(){return"Hello there again"}
+function other(){return"howdy"}function test(){return"Hello there again"}

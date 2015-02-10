@@ -19,4 +19,36 @@ body {
 h1 {
 	font-size: 2.2rem;
 	color: lighten($darkblue, 25);
+	border-bottom: 1px solid $lightgray; 
+	padding-top: 12px;
+}
+
+h2 {
+	font-size: 1.5rem; 
+	line-height: 100%; 
+	margin: 20px 0 0 0;
+	color: $orange;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 60%;
+	color: $orange;
+}
+
+a {
+	text-decoration: underline;
+	color: $mediumgray;
+	&:hover {
+		color: $orange; 
+	}
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.small {
+	font-size: 1rem;
+	color: $blue;
 }

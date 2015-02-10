@@ -1,2 +1,22 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+body {
+	font-family: $font-primary; 
+	font-size: 1.2rem;
+	line-height: 160%; 
+	background: $paleyellow; 
+	color: $darkblue;
+}
+
+#{headings()} {
+	font-family: $font-secondary; 
+	font-weight: normal; 
+	color: $darkgray;
+	@include text-shadow($paleryellow 1px 1px)
+}
+
+h1 {
+	font-size: 2.2rem;
+	color: lighten($darkblue, 25);
+}

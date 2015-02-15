@@ -126,13 +126,96 @@ header {
 
 // Speakers List --------------------------
 .speakerslist {
+   img {
+    @include border-radius;
+    width: 120px;
+    float: left;
+    margin: {
+      right: 10px;
+      bottom: 10px;
+    } //margin
+  } //img
+
+  i {
+  	padding-right: 15px;
+  }
+
 	@include at-breakpoint($medium) {
 		text-align: center; 
 		@include background(linear-gradient(top, lighten($darkblue, 3), $darkerblue));
-		color: rgba($paleyellow, 50);
+		color: rgba($paleyellow, .5);
 		overflow: hidden;
 		padding-bottom: 10px;
-	}
+		#{headings()} {
+			text-shadow: none; 
+			border-bottom: none !important;
+		} // headings
+
+		h1 {
+			color: $green;
+			font-size: 2.6rem; 
+			line-height: 1em; 
+			@include at-breakpoint($large) {
+				font-size: 4rem; 
+				line-height: 1em;
+			} // medium
+		} // h1
+
+		h3 { 
+			color: lighten($yellow, 10);
+			line-height: .9rem;
+		} // h3
+
+		.small {
+			padding-top: .4em !important; 
+			line-height: 1em; 
+			color: lighten($darkerblue, 30);
+			a {
+				color: lighten($darkerblue, 30);
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				} // a:hover 
+			} // a 
+		} // small
+
+		img.speaker {
+			float: none; 
+			width: 40%; 
+			max-width: 170px; 
+			margin: 0 auto; 
+			@include border-radius(50%);
+		}
+
+		.small {
+			display: block;
+		}
+
+		p:nth-of-type(2) {
+			font-weight: 200 !important; 
+			text-align: left; 
+			font-size: .8em; 
+			line-height: 0;
+			@include single-transition(all, .5s, ease-out);
+			opacity: 0;
+		}
+
+		&:hover {
+			p:nth-of-type(2) {
+				line-height: 1.5em; 
+				opacity: 1; 
+			}
+		}
+
+		.artist {
+			@include span-columns(4, 12);
+		}
+
+		.artist:nth-of-type(3) {
+			@include span-columns(4 omega, 12);
+		}
+
+	} // medium
 } // speakers list
 
 // footer --------------------------
